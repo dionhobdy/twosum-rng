@@ -13,6 +13,7 @@ for (i = 0; i < nums.length; i++) {
     if (nums[i] == target) {
         arr.push(nums.indexOf(i))
         console.log(arr)
+        break;
     } else {
         for (y = 0; y < nums.length; y++) {
             if (nums[i] + nums[y] == target) {
