@@ -16,11 +16,10 @@ let twoSum = () => {
         } else { hash[nums.indexOf(i)] = i }
     }
     if (caught !== true) {
-        for (j = 0; j < nums.length; j++) { let comp = target  - nums[j] }
-        if (hash.hasOwnProperty(comp) && hash[comp] !== j) { return [hash[comp], j] }
+        for (j = 0; j < nums.length; j++) { 
+            let comp = target  - nums[j] 
+            if (hash.hasOwnProperty(comp) && hash[comp] !== j) { return [hash[comp], j] }
+        }
     }
     return null
 }
-// if (arr.length >= 1) { console.log(twoSum()) } else { console.log('err - arr is empty') }
-
-console.log(twoSum())
