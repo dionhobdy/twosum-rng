@@ -9,7 +9,7 @@ let twoSum = () => {
     for (i = 0; i < nums.length; i++) {
         if (nums[i] == target) {
             hash[nums.indexOf(i)] = i;
-            let caught = true;
+            caught = true;
             break;
         } else { hash[nums.indexOf(i)] = i; }
     }
