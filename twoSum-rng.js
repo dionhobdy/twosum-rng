@@ -10,14 +10,16 @@ for (x = 0; x < 8; x++) {
 console.log(`target - ${target}`)
 console.log(nums)
 for (i = 0; i < nums.length; i++) {
-    for (y = 0; y < nums.length; y++) {
-        if (nums[i] + nums[y] == target) {
-            arr.push(nums.indexOf(i), nums.indexOf(y))
+    if (nums[i] == target) {
+        arr.push(nums.indexOf(i))
+        console.log(arr)
+    } else {
+        for (y = 0; y < nums.length; y++) {
+            if (nums[i] + nums[y] == target) {
+                arr.push(nums.indexOf(i), nums.indexOf(y))
+                console.log(arr)
+            }
         }
     }
 }
-if (arr.length === 0) {
-    console.log('err - arr is empty')
-} else {
-    console.log(arr)
-}
+if (arr.length === 0) { console.log('err - arr is empty') }
